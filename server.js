@@ -1,11 +1,8 @@
-console.log('Hier komt je server voor Sprint 10.')
 import express, { request, response } from 'express'
 
-console.log('Gebruik uit Sprint 9 alleen de code die je mee wilt nemen.')
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
-console.log('Zet \'m op!')app.get('/', async function (request, response) {
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -166,3 +163,6 @@ app.listen(app.get('port'), function () {
   console.log(`Daarna kun je via http://localhost:${app.get('port')}/ jouw interactieve website bekijken.\n\nThe Web is for Everyone. Maak mooie dingen 🙂`)
 })
 
+app.use((req, res, next) => {
+  res.status(404).send("Sorry can not find page")
+})
