@@ -8,7 +8,6 @@ Ontwerp en maak een interactieve website die snel laadt en prettig te gebruiken 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
@@ -45,9 +44,18 @@ Om mijn ontwerpt tot leven te brengen heb ik gebruik gemaakt van HTML, CSS, JS, 
 
 Voor het opslaan van cadeautjes heb ik eerst een [formulier](https://github.com/khiettt/user-experience-enhanced-website/blob/9052cdc389ead67c5c58b70873ec62cf59e072c3/views/index.liquid#L41-L45) gemaakt met de data van de prodcuten erin en een POST methode gebruikt. Het gebruiken van `<form>` is het meest betrouwbare element, omdat dit werkt in elke browser, op elk apparaat, overal, voor iedereen. Wanneer je op de knop klikt, wordt er een POST-verzoek gestuurd naar [server.js](https://github.com/khiettt/user-experience-enhanced-website/blob/9052cdc389ead67c5c58b70873ec62cf59e072c3/server.js#L69-L83) met het product-ID. De server ontvangt dit ID en stuurt het door naar een API om het product op te slaan in de lijst van de gebruiker. Daarna wordt je teruggestuurd naar de homepage.
 
-_**Voorbeeld:**_
+### Aantal cadeautjes in je lijst 
+
+Met `size` kan er aangegeven worden hoeveel cadeau's zijn opgeslagen. 
+
+https://github.com/khiettt/user-experience-enhanced-website/blob/85a0595d7523e415242409dcdf40285014e2625c/views/wishlist.liquid#L25
+
+<img width="380" height="142" alt="Scherm­afbeelding 2026-06-18 om 20 35 09" src="https://github.com/user-attachments/assets/2de099b6-c5ba-468f-87df-dda52b309e55" />
+
 
 ## Bronnen
+
+[Liquid](https://shopify.github.io/liquid/filters/size/)
 
 ## Licentie
 
