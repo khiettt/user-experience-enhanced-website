@@ -1,5 +1,68 @@
+{% render 'partials/head.liquid' %}
+<nav>
+    <a href="/">
+    <img class="logo" src="assets/logoPink.svg" alt="logo">
+    </a>
+
+    <div class="list-logo">
+        <img class="list-line" src="assets/listLine.svg" alt="list">
+    </div>
+    {% comment %} <img class="login-logo" src="assets/loginLogo.svg" alt="login"> {% endcomment %}
+</nav>
+
+<div class="divider"></div>
+
+<h1>Lijstje van<span>Mijn mama</span></h1>
+<div class="grey-background"></div>
+
+<div class="divider"></div>
+
+
+
+<hr>
+
+<a class="back-btn" href="/">Terug</a>
+
+<main>
+
+    <div class="card-container">
+        {% for item in likedProducts %}
+            {% assign product = item.milledoni_products_id %}
+            <section class="card">
+
                 <form action="/remove/{{ product.id }}" method="POST">
                     <button>
                         <img alt="Verwijder van lijst" src="assets/cadeauLijst.svg" />
                     </button>
                 </form>
+
+                <img class="cadeau-bow" src="assets/cadeau-top.svg" alt="logo bow">
+
+                <img class="product-image" src="{{ product.image }}" width="{{ img.width }}" height="{{ img.height }}" alt="product">
+
+                <div class="card-line"></div>
+
+                <h2 class="product-name">{{ product.name }}</h2>
+
+                <p class="product-amount">{{ product.amount }}</p>
+
+                <a href="/cadeaus">Bekijk cadeau</a>
+            </section>
+        {% endfor %}
+    </div> 
+
+    <picture>
+        <source src="assets/iconMilledoni.avif" type="image/avif">
+        <source srcset="assets/iconMilledoni.webp" type="image/webp">
+        <img class="oepss-icon" src="assets/Icon milledoni.svg">
+    </picture>
+
+    <p>Oepss... je lijstje is leeg</p>
+
+    <div class="find-gift">
+        <p>Zoek een leuk cadeau</p>
+    </div>
+
+</main>
+
+{% render 'partials/foot.liquid' %}
