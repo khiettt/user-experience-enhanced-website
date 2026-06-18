@@ -11,18 +11,6 @@ Ontwerp en maak een interactieve website die snel laadt en prettig te gebruiken 
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-Readme schrijven
-
-Schrijf daarna een nette Readme, waarin je laat zien wat je hebt gedaan. In de Readme presenteer je wat je hebt gemaakt en leg je je ontwerpkeuzes en eigen ideeën uit.
-
-User experience
-
-Laat zien hoe je de user experience hebt verbeterd, hoe werkt de post interactie? Welke Loading state en Success state hebt je toegevoegd? En hoe ziet het eruit? Misschien kan je dit met een filmpje laten zien.
-
-Frontend performance
-
-Beschrijf kort wat er uit de Performance audit is gekomen en hoe je de frontend performance hebt verbeterd, bijvoorbeeld met responsive images, layout shift en/of perceived performance.
-
 ## Beschrijving
 Als je opzoek bent naar een cadeau voor iemand, is milledoni de website voor je zoektocht. Ze hebben cadeautjes voor alle leeftijden en gelegenheden en je kan samen met de chatbox de juiste cadeau vinden. Voor deze sprint ben ik mij gaan focussen op de emty state van de wishlist pagina. Als een gebruiker wilt weten hoeveel cadeaus zijn opgeslagen in zijn/haar lijstje kan de dat makkelijk zien
 
