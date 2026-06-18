@@ -1,1 +1,8 @@
+                {% comment %} met een form element kan ik een method="POST" toevoegen en de cadeautjes opslaan in een lijst. {% endcomment %}
+
+                <form action="/{{ product.id }}" method="POST">
+                    <button>
+                        <img class="cadeau-list" alt="Voeg toe aan lijst" src="assets/cadeauLijst.svg" />
+                    </button>
+                </form>
                 <img class="product-image" src="{{ product.image }}" width="{{ img.width }}" height="{{ img.height }}" alt="product">
