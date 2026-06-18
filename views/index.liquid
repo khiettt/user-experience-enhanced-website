@@ -1,3 +1,41 @@
+{% render 'partials/head.liquid' %}
+<header>
+    <nav>
+        <a href="/">
+            <img class="logo" src="assets/logoPink.svg" alt="logo">
+        </a>
+        
+
+        <div class="list-logo">
+            <a href="/wishlist"><img class="list-line" src="assets/listLine.svg" alt="list"></a>
+        </div>
+        {% comment %} <img class="login-logo" src="assets/loginLogo.svg" alt="login"> {% endcomment %}
+    </nav>
+</header>
+
+<div class="divider"></div>
+
+<h1>Ik zoek een cadeau voor... <span>Mijn Moeder</span></h1>
+<div class="grey-background"></div>
+
+<div class="divider"></div>
+
+<button id="theme-toggle">kleur veranderen</button>
+
+<main>
+    
+    <img class="filter" src="assets/filter.svg" alt="filter">
+
+    <div class="card-container">
+        {% for product in products %}
+            
+            <section class="card">
+                <img class="cadeau-bow" src="assets/cadeau-top.svg" alt="afbeelding van de stikjes">
+            
+                    {% comment %} <div class="pop-up">
+                        <p>Opgeslagen in lijst</p>
+                    </div> {% endcomment %}
+
                 {% comment %} met een form element kan ik een method="POST" toevoegen en de cadeautjes opslaan in een lijst. {% endcomment %}
 
                 <form action="/{{ product.id }}" method="POST">
@@ -5,4 +43,22 @@
                         <img class="cadeau-list" alt="Voeg toe aan lijst" src="assets/cadeauLijst.svg" />
                     </button>
                 </form>
+
+`
                 <img class="product-image" src="{{ product.image }}" width="{{ img.width }}" height="{{ img.height }}" alt="product">
+
+                <div class="card-line"></div>
+
+                <h2 class="product-name">{{ product.name }}</h2>
+
+                <p class="product-amount">{{ product.amount }}</p>
+
+                <a href="/cadeaus">Bekijk cadeau</a>
+            </section>
+            
+        {% endfor %}
+    </div> 
+
+</main>   
+
+{% render 'partials/foot.liquid' %}
