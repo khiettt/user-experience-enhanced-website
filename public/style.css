@@ -1,19 +1,53 @@
-/* :root{
-    --bg: #898A8D;
+:root {
+    /* Hoofdkleuren */
+  --primary: #AA2677;
+  --primary-hover: #931f67;
+
+/* Achtergrond kleur */
+  --background: #F2F2F2;
+  --card-background: #FFFFFF;
+
+  /* Tekst */
+  --text-primary: #2D2D2D;
+  --text: #222222;
+
+    /* Accentkleuren */
+  --accent: #20A687;
+  --accent-hover: #1b8d73;
+
+  /* Statuskleuren */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+
+    /* Borders */
+  --border: #D9D9D9;
+  --border-light: #EAEAEA;
+  --border-dark: #B0B0B0;
+
+    /* Schaduwen */
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #f5a7d7;
+    --background: #222222;
+    --card-background: #898A8D;
+    --text-primary: #FFFFFF;
     --text: #FFFFFF;
-    --span-text:
-} */
+  }
+}
 
 *{
     box-sizing: border-box;
 } 
 body{
     margin: 25px;
-
-
-    /* @media (prefers-color-scheme: dark) {
-        background-color: #898A8D;
-    } */
+    background-color: var(--card-background);
 }
 
 
@@ -37,9 +71,9 @@ main{
     width: 40px;
 }
 .list-logo{
-    border: 0.3px solid #C9C9C9;
+    border: 0.3px solid var(--border);
     border-radius: 100px;
-    box-shadow: 1px 1px 10px 1px #C9C9C9;
+    box-shadow: 1px 1px 10px 1px var(--shadow-dark);
     width: 40px;
     height: 40px;
 
@@ -59,28 +93,14 @@ main{
 .divider{
     margin: 10px;
     height: 2px;
-    background: #AA2677;
+    background: var(--primary);
 }
 .grey-background{
     width: auto;
     height: 300px;
     border-radius: 10px;
-    background-color: #F2F2F2;
-
-    /* @media (prefers-color-scheme: dark) {
-        background-color: #222222;
-    } */
+    background-color: var(--background);
 }
-
-/* #theme-toggle{
-    background-color: #AA2677;
-    color:#FFFFFF;
-}
-.light body {
-  background: #898A8D;
-  color: white;
-} */
-
 
 h1{
     font-family: Parkinsans;
@@ -90,15 +110,18 @@ h1{
     padding: 20px;
     inset-block-start: 6em;
 
-    /* @media (prefers-color-scheme: dark) {
-        color: #FFFFFF;
-    } */
+    color: var(--text-primary);
 
+}
+
+h2{
+    color: var(--text-primary);
 }
 span{
     font-family: Parkinsans;
     font-size: 30px;
-    color: #AA2677;
+    color: var(--primary);
+
 }
 
 .filter{
@@ -142,7 +165,7 @@ span{
     position: relative;
     margin: 1em;
     padding: 1rem;
-    border: 3px solid #AA2677;
+    border: 3px solid var(--primary);
     border-radius: 7px;
 
 }
@@ -157,7 +180,7 @@ button{
     position: relative;
     top: 25px;
     height: 2px;
-    background: #F2F2F2;
+    background: var(--background);
     border: 3px;
 }
 
@@ -174,7 +197,7 @@ button{
     width: fit-content;
     padding: 5px 5px 5px 5px;
     text-align: center;
-    border: 1px solid #AA2677;
+    border: 1px solid var(--primary);
     border-radius: 10px;
 }
 .product-image{
@@ -186,17 +209,7 @@ button{
     font-family: Parkinsans;
     font-size: 20px;
     margin-top: 30px;
-} */
-
-/* pop-up */
-/* .pop-up{
-    background-color: #20A687;
-    width: 150px;
-    padding: 2px 2px 2px 2px;
-    text-align: center;
-    position: relative;
-    bottom: 3em;
-} */
+} 
 .wishlist-products{
     margin-top: 40px;
     text-align: center;

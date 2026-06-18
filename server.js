@@ -111,7 +111,7 @@ app.post('/remove/:id', async function (request, response) {
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 8002)
 
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
