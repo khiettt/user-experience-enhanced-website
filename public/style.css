@@ -1,0 +1,203 @@
+/* :root{
+    --bg: #898A8D;
+    --text: #FFFFFF;
+    --span-text:
+} */
+
+*{
+    box-sizing: border-box;
+} 
+body{
+    margin: 25px;
+
+
+    /* @media (prefers-color-scheme: dark) {
+        background-color: #898A8D;
+    } */
+}
+
+
+@font-face {
+    font-family: Parkinsans;
+    src: url('/fonts/Parkinsans-VariableFont_wght.ttf') format('truetype');
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img:first-child {
+    margin-right: auto;
+}
+main{
+    margin-top: 7em;
+}
+.logo{
+    width: 40px;
+}
+.list-logo{
+    border: 0.3px solid #C9C9C9;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px 1px #C9C9C9;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-line{
+    width: 26px;
+    margin-top: 5px;
+}
+.login-logo{
+
+    justify-self: center;
+    width: 50px;
+}
+.divider{
+    margin: 10px;
+    height: 2px;
+    background: #AA2677;
+}
+.grey-background{
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+
+    /* @media (prefers-color-scheme: dark) {
+        background-color: #222222;
+    } */
+}
+
+/* #theme-toggle{
+    background-color: #AA2677;
+    color:#FFFFFF;
+}
+.light body {
+  background: #898A8D;
+  color: white;
+} */
+
+
+h1{
+    font-family: Parkinsans;
+    font-weight: 300;
+    font-size: 26px;
+    position: absolute;
+    padding: 20px;
+    inset-block-start: 6em;
+
+    /* @media (prefers-color-scheme: dark) {
+        color: #FFFFFF;
+    } */
+
+}
+span{
+    font-family: Parkinsans;
+    font-size: 30px;
+    color: #AA2677;
+}
+
+.filter{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    left: 85%;
+
+    @media (width:768px) {
+        left: 90%;
+    }
+}
+/* .back-btn{
+
+} */
+
+.oepss-icon{
+    position: relative;
+    top: 20px;
+    
+}
+
+/* card */
+.card-container{
+    display: grid;
+    gap: 20px;
+
+    @media (min-width: 510px) {
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px;
+        }
+
+    @media (min-width: 890px) {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+    }
+}
+.card{
+    display: grid;
+    position: relative;
+    margin: 1em;
+    padding: 1rem;
+    border: 3px solid #AA2677;
+    border-radius: 7px;
+
+}
+button{
+    background: none;
+    border: none;
+    position: relative;
+    left: 14em;
+    bottom: 10px;
+}
+.card-line{
+    position: relative;
+    top: 25px;
+    height: 2px;
+    background: #F2F2F2;
+    border: 3px;
+}
+
+.cadeau-bow{
+    justify-self: center;
+    position: relative;
+    top: -3.8em;
+
+}
+.cadeau-list{
+    width: 50px;
+}
+.find-gift{
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    border: 1px solid #AA2677;
+    border-radius: 10px;
+}
+.product-image{
+    display: block;
+    max-inline-size: 100%;
+   
+}
+.product-name{
+    font-family: Parkinsans;
+    font-size: 20px;
+    margin-top: 30px;
+} */
+
+/* pop-up */
+/* .pop-up{
+    background-color: #20A687;
+    width: 150px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    position: relative;
+    bottom: 3em;
+} */
+.wishlist-products{
+    margin-top: 40px;
+    text-align: center;
+}
