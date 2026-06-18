@@ -2,8 +2,6 @@
 # Enhanced website
 Ontwerp en maak een interactieve website die snel laadt en prettig te gebruiken is.
 
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/enhanced-website/blob/main/docs/INSTRUCTIONS.md)
-
 
 ## Inhoudsopgave
 
@@ -14,22 +12,44 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/enhance
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
+Readme schrijven
+
+Schrijf daarna een nette Readme, waarin je laat zien wat je hebt gedaan. In de Readme presenteer je wat je hebt gemaakt en leg je je ontwerpkeuzes en eigen ideeën uit.
+
+User experience
+
+Laat zien hoe je de user experience hebt verbeterd, hoe werkt de post interactie? Welke Loading state en Success state hebt je toegevoegd? En hoe ziet het eruit? Misschien kan je dit met een filmpje laten zien.
+
+Frontend performance
+
+Beschrijf kort wat er uit de Performance audit is gekomen en hoe je de frontend performance hebt verbeterd, bijvoorbeeld met responsive images, layout shift en/of perceived performance.
+
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar je live site 🌐-->
+Als je opzoek bent naar een cadeau voor iemand, is milledoni de website voor je zoektocht. Ze hebben cadeautjes voor alle leeftijden en gelegenheden en je kan samen met de chatbox de juiste cadeau vinden. Voor deze sprint ben ik mij gaan focussen op de emty state van de wishlist pagina. Als een gebruiker wilt weten hoeveel cadeaus zijn opgeslagen in zijn/haar lijstje kan de dat makkelijk zien
+
+geïnteresseerd in cadeaus zoeken voor je familie of vrienden, bezoek dan Milledoni.com.
 
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+Als gebruiker wil je weten hoeveel cadeaus je hebt opgeslagen in je lijst
+
+<img width="380" height="803" alt="Scherm­afbeelding 2026-06-18 om 18 14 40" src="https://github.com/user-attachments/assets/689629dc-d29f-43db-8bf0-1205d5f40d6e" />
+
+<img width="380" height="803" alt="Scherm­afbeelding 2026-06-18 om 18 17 29" src="https://github.com/user-attachments/assets/f18941a8-e85d-44b2-9155-e1ffb8d50b36" />
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
-## Installatie
-<!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
+Om mijn ontwerpt tot leven te brengen heb ik gebruik gemaakt van HTML, CSS, JS, NodeJS, Express, JSON en Liquid.
+
+**POST**
+
+Voor het opslaan van cadeautjes heb ik eerst een [formulier](https://github.com/khiettt/user-experience-enhanced-website/blob/9052cdc389ead67c5c58b70873ec62cf59e072c3/views/index.liquid#L41-L45) gemaakt met de data van de prodcuten erin en een POST methode gebruikt. Het gebruiken van `<form>` is het meest betrouwbare element, omdat dit werkt in elke browser, op elk apparaat, overal, voor iedereen. Wanneer je op de knop klikt, wordt er een POST-verzoek gestuurd naar [server.js](https://github.com/khiettt/user-experience-enhanced-website/blob/9052cdc389ead67c5c58b70873ec62cf59e072c3/server.js#L69-L83) met het product-ID. De server ontvangt dit ID en stuurt het door naar een API om het product op te slaan in de lijst van de gebruiker. Daarna wordt je teruggestuurd naar de homepage.
+
+_**Voorbeeld:**_
 
 ## Bronnen
 
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/enhanced-website/blob/main/docs/INSTRUCTIONS.md)
