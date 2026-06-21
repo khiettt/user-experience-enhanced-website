@@ -13,7 +13,6 @@
 
     /* Accentkleuren */
   --accent: #20A687;
-  --accent-hover: #1b8d73;
 
   /* Statuskleuren */
   --success: #22C55E;
@@ -39,6 +38,7 @@
     --card-background: #898A8D;
     --text-primary: #FFFFFF;
     --text: #FFFFFF;
+    --accent: #15725d
   }
 }
 
@@ -109,13 +109,16 @@ h1{
     position: absolute;
     padding: 20px;
     inset-block-start: 6em;
-
     color: var(--text-primary);
 
 }
 
 h2{
     color: var(--text-primary);
+}
+
+a{
+    color: var(--text);
 }
 span{
     font-family: Parkinsans;
@@ -168,6 +171,33 @@ span{
     border: 3px solid var(--primary);
     border-radius: 7px;
 
+}
+.succes {
+    position: fixed;
+    top: 20rem;
+    right: 28rem;
+
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+
+    background: var(--accent);
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+
+    z-index: 1000;
+
+    animation: slideIn .3s ease-in;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 button{
     background: none;

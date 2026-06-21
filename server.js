@@ -39,8 +39,18 @@ app.get('/', async function (request, response) {
   const productResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?' + new URLSearchParams(parms))
 
   const productResponseJSON = await productResponse.json()
-  // console.log(productResponseJSON.data)
-  response.render('index.liquid', { products: productResponseJSON.data })
+
+  response.render('index.liquid', {
+  products: productResponseJSON.data,
+
+  // Lees de status uit de URL, bijvoorbeeld:
+  // /?status=success
+  status: request.query.status,
+
+    // Lees het ID van het opgeslagen product uit de URL, bijvoorbeeld:
+  // /?product=123
+  savedProductId: request.query.product
+})
 })
 
 
@@ -81,9 +91,13 @@ app.post('/:id', async function (request, response) {
       },
     }
   )
-  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
-  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-  response.redirect(303, '/')
+  
+  // Na het opslaan van een product wordt de gebruiker terug gestuurd naar de homepage.
+  //informatie toe aan de URL zodat Liquid weet:
+
+  // status=success  -> het opslaan is gelukt
+  // product=id      -> welk product is opgeslagen
+  response.redirect(303, '/?status=success&product=' + request.params.id)
 })
 
 app.post('/remove/:id', async function (request, response) {

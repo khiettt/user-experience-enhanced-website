@@ -20,21 +20,37 @@
 
 <div class="divider"></div>
 
-<button id="theme-toggle">kleur veranderen</button>
-
 <main>
     
     <img class="filter" src="assets/filter.svg" alt="filter">
 
     <div class="card-container">
+        
         {% for product in products %}
+
+            {% comment %}
+                Door append: '' te gebruiken kunnen we beide waarden veilig vergelijken.
+            {% endcomment %}
+            {% assign currentId = product.id | append: '' %}
+
+            {% comment %}
+                Toon de succesmelding alleen wanneer:
+
+                1. De URL aangeeft dat het opslaan gelukt is
+                2. Het huidige product hetzelfde ID heeft als het opgeslagen product
+
+                Hierdoor verschijnt de melding alleen bij het juiste kaartje.
+            {% endcomment %}
+    
+            {% if status == 'success' and savedProductId == currentId %}
+            <output class="succes">
+                <p>Toegevoegd aan je lijst!</p>
+            </output>
+            {% endif %}
+
             
             <section class="card">
                 <img class="cadeau-bow" src="assets/cadeau-top.svg" alt="afbeelding van de stikjes">
-            
-                    {% comment %} <div class="pop-up">
-                        <p>Opgeslagen in lijst</p>
-                    </div> {% endcomment %}
 
                 {% comment %} met een form element kan ik een method="POST" toevoegen en de cadeautjes opslaan in een lijst. {% endcomment %}
 
