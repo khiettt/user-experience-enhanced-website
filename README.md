@@ -17,7 +17,16 @@ Als je opzoek bent naar een cadeau voor iemand, is milledoni de website voor je 
 geïnteresseerd in cadeaus zoeken voor je familie of vrienden, bezoek dan Milledoni.com.
 
 ## Gebruik
-Als gebruiker wil je weten hoeveel cadeaus je hebt opgeslagen in je lijst
+Als gebruiker wil je weten of je cadeau is opgeslagen en hoeveel cadeaus je hebt opgeslagen in je lijst. 
+
+
+_**Succes state**_
+
+<img width="800" height="600" alt="Scherm­afbeelding 2026-06-20 om 14 26 16" src="https://github.com/user-attachments/assets/4d0b09df-978f-4696-b95d-e128ff438972" />
+
+<hr>
+
+_**Met "Size" wordt er aangegeven hoeveel producten worden opgeslagen**_
 
 <img width="380" height="803" alt="Scherm­afbeelding 2026-06-18 om 18 14 40" src="https://github.com/user-attachments/assets/689629dc-d29f-43db-8bf0-1205d5f40d6e" />
 
@@ -34,11 +43,32 @@ Voor het opslaan van cadeautjes heb ik eerst een [formulier](https://github.com/
 
 ### Aantal cadeautjes in je lijst 
 
-Met `size` kan er aangegeven worden hoeveel cadeau's zijn opgeslagen. 
+Ik heb met behulp van server-js en liquid een succes state toegevoegd zodat de gebruiker weet dat een cadeau is opgeslagen. Als je wilt weten welke cadeutjes allemaal zijn ogeslagen ga je naar je "lijstje" en krijg je gelijk te zien hoeveel cadeau's zijn opgeslagen. Dat heb ik met begulp van een {{ | **size** }} kunenn doen
 
 https://github.com/khiettt/user-experience-enhanced-website/blob/85a0595d7523e415242409dcdf40285014e2625c/views/wishlist.liquid#L25
 
 <img width="380" height="142" alt="Scherm­afbeelding 2026-06-18 om 20 35 09" src="https://github.com/user-attachments/assets/2de099b6-c5ba-468f-87df-dda52b309e55" />
+
+
+_Server js:_
+
+Leest de status van de URL bijvoorbeeld: _?status=success_
+
+https://github.com/khiettt/user-experience-enhanced-website/blob/81168550d83d93bc476aa2b5c083bdd045a2387f/server.js#L48
+
+
+**status=success** ----> opslaan is gelukt 
+
+**product=id** -----> welke product is opgeslagen
+
+https://github.com/khiettt/user-experience-enhanced-website/blob/81168550d83d93bc476aa2b5c083bdd045a2387f/server.js#L100
+
+Toon de succesmelding alleen wanneer:
+
+                1. De URL aangeeft dat het opslaan gelukt is
+                2. Het huidige product hetzelfde ID heeft als het opgeslagen product
+
+https://github.com/khiettt/user-experience-enhanced-website/blob/81168550d83d93bc476aa2b5c083bdd045a2387f/views/index.liquid#L31-L49
 
 
 ## Bronnen
